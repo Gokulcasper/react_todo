@@ -8,6 +8,8 @@ function App() {
         <TodoList />
       </h1>
       <input />
+      <button>Add</button>
+      <button>Clear</button>
     </div>
   );
 }
