@@ -1,14 +1,12 @@
 import React from "react";
 import Todo from "./Todo";
 
-const TodoList = ({ todoList }) => {
+export default function TodoList({ todoList, toogleComplete }) {
   return (
     <div>
       {todoList.map((todo) => (
-        <Todo key={todo} todo={todo} />
+        <Todo key={todo} todo={todo} toogleComplete={toogleComplete} />
       ))}
     </div>
   );
-};
-
-export default TodoList;
+}

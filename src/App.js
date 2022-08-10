@@ -5,12 +5,11 @@ import TodoList from "./TodoList";
 function App() {
   const [todoList, setTodoList] = useState([]);
   const inputRef = useRef();
-
-  const handleAdd = (e) => {
-    e.preventDefault();
+  const handleAdd = () => {
     const val = inputRef.current.value;
-    const tmpTodo = [...todoList].push(val);
-    setTodoList(tmpTodo);
+    const tmpToDo = [...todoList];
+    tmpToDo.push({ id: 1, desc: val, complete: false });
+    setTodoList(tmpToDo);
     inputRef.current.value = "";
   };
 
